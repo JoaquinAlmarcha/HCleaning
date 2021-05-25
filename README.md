@@ -2,4 +2,4 @@
 Proyecto DAD 2021
 
 
-Repositorio en construccion.
+Ultima actualizacion: Entregable2.
