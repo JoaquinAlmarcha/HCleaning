@@ -165,13 +165,14 @@ Se ha implementado un método DELETE para la gestión de las operaciones.
 
  DEVICE
 
-![](HCleaning\API REST\getDevice.png)
+![](img="HCleaning\API REST\getDevice.png")
 
 ![](HCleaning/API REST/postDevice.png)
 
 
 
 SENSOR
+
 
 ![](D:\Desktop\DAD\API REST\getSensor.png)
 
