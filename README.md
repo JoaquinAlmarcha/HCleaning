@@ -207,7 +207,7 @@ Se trata de un protocolo basado en TCP/IP como base de la comunicación. En el c
 
 Su funcionamiento se basa en un servicio de mensajería push con patrón publicador/suscriptor (pub-sub). Varias fuentes de información afirman que este tipo de infraestructura utiliza una conexión cliente con un servidor central conocido como broker.
 
-<center><img src="images/MQTT1.png" />
+<center><img src="images/MQTT1.PNG" />
 
 
  </center>
