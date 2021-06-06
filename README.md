@@ -33,12 +33,12 @@ Se adjunta los elementos Hardware que se están empleando en el proyecto
 
  
 <p align="center">
-![](images/hardware.png)
+<img src="images/hardware.png" />)
 </p>
  
-
+<p align="center">
 Figura 1: Elementos Hardware en la solución
-
+</p>
 
 
 #### **3.**  **Diagrama de conexión de los componentes**
@@ -52,8 +52,9 @@ A continuación, se adjunta el diagrama de conexión de los componentes
 <p align="center">
 <img src="images/DiagramaConexiones.jpg" />
 </p>    
-
-<center>Figura 2: Diagrama de conexión de los componentes</center>
+<p align="center">
+Figura 2: Diagrama de conexión de los componentes
+</p>
 
 
 
