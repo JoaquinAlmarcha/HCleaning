@@ -19,13 +19,6 @@ Adicionalmente, se controlarán a los usuarios que accedan a las salas blancas y
  
 
 A continuación, se realiza una descripción de los pasos que se han ido desarrollando con el objetivo de la creación de dicha herramienta.
-
- 
-
-
-
- 
-
  
 
  
@@ -39,9 +32,9 @@ Se adjunta los elementos Hardware que se están empleando en el proyecto
  
 
  
-
+<p align="center">
 ![](images/hardware.png)
-
+</p>
  
 
 Figura 1: Elementos Hardware en la solución
@@ -56,9 +49,9 @@ Figura 1: Elementos Hardware en la solución
 
 A continuación, se adjunta el diagrama de conexión de los componentes 
 
- <center><img src="images/DiagramaConexiones.jpg" />
-     
- </center>
+<p align="center">
+<img src="images/DiagramaConexiones.jpg" />
+</p>    
 
 <center>Figura 2: Diagrama de conexión de los componentes</center>
 
@@ -76,9 +69,9 @@ A continuación, se adjunta el diagrama de conexión de los componentes
 
 ![](images/ModeloBaseDatos.png)
 
-<center>
+<p align="center">
     Figura 3: Modelo de la base de datos 
-</center>
+</p>
 
 
 
@@ -209,22 +202,20 @@ Su funcionamiento se basa en un servicio de mensajería push con patrón publica
 <p align="center">
 <img src="images/MQTT1.PNG">
 </p>
-<center>
+<p align="center">
     Figura 4: Diagrama descripción mensajes MQTT 
-</center> 
+</p> 
 
 En el presente proyecto, nuestra estructura de los mensajes MQTT, se representa mediante el siguiente diagrama.
 
  
 
-<center><img src="images/mqtt.jpg" />
+<img src="images/mqtt.jpg" />
 
 
- </center>
-
- <center>
+<p align="center">
      Figura 5: Diagrama descripción mensajes MQTT (proyecto)
- </center>
+</p>
 
  
 
