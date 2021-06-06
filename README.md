@@ -40,7 +40,7 @@ Se adjunta los elementos Hardware que se están empleando en el proyecto
 
  
 
-![Diagrama  Descripción generada automáticamente](file:///C:/Users/JOAQUIN/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+![](images/hardware.png)
 
  
 
@@ -56,7 +56,7 @@ Figura 1: Elementos Hardware en la solución
 
 A continuación, se adjunta el diagrama de conexión de los componentes 
 
- <center><img src="API REST/DiagramaConexiones.jpg" />
+ <center><img src="images/DiagramaConexiones.jpg" />
      
  </center>
 
@@ -74,7 +74,7 @@ A continuación, se adjunta el diagrama de conexión de los componentes
 
 
 
-![](D:\Desktop\DAD\Proyecto\Entregable2\ModeloBaseDatos.png)
+![](images/ModeloBaseDatos.png)
 
 <center>
     Figura 3: Modelo de la base de datos 
@@ -207,7 +207,7 @@ Se trata de un protocolo basado en TCP/IP como base de la comunicación. En el c
 
 Su funcionamiento se basa en un servicio de mensajería push con patrón publicador/suscriptor (pub-sub). Varias fuentes de información afirman que este tipo de infraestructura utiliza una conexión cliente con un servidor central conocido como broker.
 
-<center><img src="D:\Desktop\DAD\Proyecto\Entregable2\MQTT1.png" />
+<center><img src="images/MQTT1.png" />
 
 
  </center>
@@ -220,7 +220,7 @@ En el presente proyecto, nuestra estructura de los mensajes MQTT, se representa 
 
  
 
-<center><img src="D:\Desktop\DAD\Proyecto\Entregable2\mqtt.jpg" />
+<center><img src="images/mqtt.jpg" />
 
 
  </center>
