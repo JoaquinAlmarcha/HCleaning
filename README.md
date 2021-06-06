@@ -165,9 +165,9 @@ Se ha implementado un método DELETE para la gestión de las operaciones.
 
  DEVICE
 
-![](D:\Desktop\DAD\API REST\getDevice.png)
+![](HCleaning\API REST\getDevice.png)
 
-![](D:\Desktop\DAD\API REST\postDevice.png)
+![](HCleaning/API REST/postDevice.png)
 
 
 
