@@ -70,7 +70,7 @@ A continuación, se adjunta el diagrama de conexión de los componentes
 
  
 
-#### 4**.**  Modelo de la base de datos
+#### **4.**  Modelo de la base de datos
 
 
 
@@ -132,7 +132,7 @@ Casos específicos:
 
 ·    DEVICE, SENSOR, ACTUATOR: Los dispositivos disponen métodos GET que filtran por “idSensor” obteniendo de esta manera la información acerca del sensor/actuador a consultar
 
-**.**
+
 
  
 
@@ -161,7 +161,7 @@ Se ha implementado un método DELETE para la gestión de las operaciones.
 
  
 
-***\*IMPLEMENTACIÓN\***
+**IMPLEMENTACIÓN**
 
  DEVICE
 
