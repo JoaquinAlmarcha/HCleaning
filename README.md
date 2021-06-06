@@ -192,7 +192,7 @@ SURGERY
 
 ![](D:\Desktop\DAD\API REST\postSurgery.png)
 
-![](API REST/deleteSurgery.png)
+![deleteSurgery](https://user-images.githubusercontent.com/84814513/120941669-221ce080-c724-11eb-84ed-aa48834646c9.png)
 
 
 
