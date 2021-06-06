@@ -192,7 +192,8 @@ SURGERY
 
 ![](D:\Desktop\DAD\API REST\postSurgery.png)
 
-![](D:\Desktop\DAD\API REST\deleteSurgery.png)
+https://github.com/JoaquinAlmarcha/HCleaning/blob/5dda8d8c74075a153419627bd9fc760cf4a0adbc/API%20REST/deleteSurgery.png
+
 
 
 
