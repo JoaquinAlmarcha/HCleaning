@@ -56,7 +56,7 @@ Figura 1: Elementos Hardware en la solución
 
 A continuación, se adjunta el diagrama de conexión de los componentes 
 
- <center><img src="D:\Desktop\DAD\Proyecto\Entregable2\DiagramaConexiones.jpg" />
+ <center><img src="API REST/DiagramaConexiones.jpg" />
      
  </center>
 
