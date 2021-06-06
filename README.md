@@ -165,34 +165,34 @@ Se ha implementado un método DELETE para la gestión de las operaciones.
 
  DEVICE
 
-![](img="HCleaning\API REST\getDevice.png")
+![](APIRESTImages/getDevice.png)
 
-![](HCleaning/API REST/postDevice.png)
+![](APIRESTImages/postDevice.png)
 
 
 
 SENSOR
 
 
-![](D:\Desktop\DAD\API REST\getSensor.png)
+![](APIRESTImages/getSensor.png)
 
-![](D:\Desktop\DAD\API REST\updateSensorValues.png)
+![](APIRESTImages/updateSensorValues.png)
 
 
 
 ACTUATOR
 
-![](D:\Desktop\DAD\API REST\getActuator.png)
+![](APIRESTImages/getActuator.png)
 
-![](D:\Desktop\DAD\API REST\updateActuatorValues.png)
+![](APIRESTImages/updateActuatorValues.png)
 
 SURGERY
 
-![](HCleaning\APIRESTImages\getSurgery.png)
+![](APIRESTImages/getSurgery.png)
 
-![](HCleaning\APIRESTImages\postSurgery.png)
+![](APIRESTImages/postSurgery.png)
 
-//![deleteSurgery](https://user-images.githubusercontent.com/84814513/120941669-221ce080-c724-11eb-84ed-aa48834646c9.png)
+![](APIRESTImages/deleteSurgery.png)
 
 
 
