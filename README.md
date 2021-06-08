@@ -107,6 +107,7 @@ El diseño de una API REST, se trata de una creación de una interfaz empleando 
 El método REST se basa en la separación de su API en recursos lógicos, donde estos se manipulan mediante peticiones HTTP con **métodos GET, POST, PUT y DELETE.**
 
  
+ 
 
 **Métodos GET**
 
@@ -118,6 +119,7 @@ Casos específicos:
 ·    SURGERY: Se dispone de métodos GET que filtran por “fecha” y “idRoom” para obtener la información de todas las operaciones programadas para una determinada sala. 
 
 ·    DEVICE, SENSOR, ACTUATOR: Los dispositivos disponen métodos GET que filtran por “idSensor” obteniendo de esta manera la información acerca del sensor/actuador a consultar
+
 
 
 
@@ -136,21 +138,29 @@ Se han implementado métodos POST para la inserción de datos. Esta inserción d
 
  
 
+
  **Métodos DELETE**
 
 Se ha implementado un método DELETE para la gestión de las operaciones.
 
  
 
+
+
+
 **IMPLEMENTACIÓN**
+
 
  **DEVICE**
  
  Descripción peticiones GET: Devuelve la información de un dispositivo filtrado por su idDevice o su idRoom.
+ 
  Descripcion peticiones POST: Inserta la informción de un nuevo dispositivo
  
  Url "getDevice": "/api/device/:idDevice”
+ 
  Url "getDeviceRoom": "/api/deviceOf/:idRoom”
+ 
  Url "postDevice": "/api/device/new"
 
 ![](APIRESTImages/getDevice.png)
@@ -162,10 +172,13 @@ Se ha implementado un método DELETE para la gestión de las operaciones.
 **SENSOR**
 
 Descripción peticiones GET: Devuelve la información de un sensor filtrado por su idSensor o su idDevice.
+
 Descripción peticiones POST: Inserta los valores de un sensor
 
 Url "getSensorVales": "/api/sensor/values/:idSensor"
+
 Url "getSensorDevice": "/api/sensorOf/:idDevice”
+
 Url "postSensorValues": "/api/sensor/values/:idSensor"
 
 
@@ -178,10 +191,13 @@ Url "postSensorValues": "/api/sensor/values/:idSensor"
 **ACTUATOR**
 
 Descripción peticiones GET: Devuelve la información de un actuador filtrado por su idActuator o su idDevice.
+
 Descripción peticiones POST: Inserta los valores de un actuador
 
 Url "getActuatorVales": "/api/actuator/values/:idActuator"
+
 Url "getActuatorDevice": "/api/actuatorOf/:idDevice”
+
 Url "postActuatorValues": "/api/actuator/values/:idActuator"
 
 ![](APIRESTImages/getActuator.png)
@@ -193,11 +209,15 @@ Url "postActuatorValues": "/api/actuator/values/:idActuator"
 **SURGERY**
 
 Descripción peticiones GET: Devuelve la información de las operaciones filtrado por su idSurgery
+
 Descripción peticiones POST: Inserta una nueva operación
+
 Descripción peticiones DELETE: Elimina una operacion filtrada por su idSurgery
 
 Url "getSurgery": "/api/surgery/:idSurgery"
+
 Url "postSurgery": "/api/surgery/new"
+
 Url "deleteSurgery": "/api/surgery/:idSurgery"
 
 ![](APIRESTImages/getSurgery.png)
