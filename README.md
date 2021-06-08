@@ -111,18 +111,11 @@ El método REST se basa en la separación de su API en recursos lógicos, donde 
 **Métodos GET**
 
  
-
 Para realizar las consultas a las tablas se ha realizado un método GET para cada tabla que filtra por “id”. 
 
 Casos específicos:
 
 ·    SURGERY: Se dispone de métodos GET que filtran por “fecha” y “idRoom” para obtener la información de todas las operaciones programadas para una determinada sala. 
-
- 
-
-·    USER: Se dispone de un método GET para obtener los usuarios por el “DNI”, facilitando de esta manera la labor de identificación de un usuario. 
-
- 
 
 ·    DEVICE, SENSOR, ACTUATOR: Los dispositivos disponen métodos GET que filtran por “idSensor” obteniendo de esta manera la información acerca del sensor/actuador a consultar
 
@@ -136,28 +129,29 @@ Casos específicos:
 
 Se han implementado métodos POST para la inserción de datos. Esta inserción de datos se realiza para unos casos determinados:
 
-- Añadir     un nuevo usuario
-- Añadir     un nuevo dispositivo
-- Añadir     valores de un sensor
-- Añadir     valores de un actuador
-- Añadir     una nueva operación
-- Iniciar     sesión en la aplicación
+·    Añadir un nuevo dispositivo
+·    Añadir valores de un sensor
+·    Añadir valores de un actuador
+·    Añadir una nueva operación
 
  
 
  **Métodos DELETE**
 
- 
-
 Se ha implementado un método DELETE para la gestión de las operaciones.
-
- 
 
  
 
 **IMPLEMENTACIÓN**
 
- DEVICE
+ **DEVICE**
+ 
+ Descripción peticiones GET: Devuelve la información de un dispositivo filtrado por su idDevice o su idRoom.
+ Descripcion peticiones POST: Inserta la informción de un nuevo dispositivo
+ 
+ Url "getDevice": "/api/device/:idDevice”
+ Url "getDeviceRoom": "/api/deviceOf/:idRoom”
+ Url "postDevice": "/api/device/new"
 
 ![](APIRESTImages/getDevice.png)
 
@@ -165,7 +159,14 @@ Se ha implementado un método DELETE para la gestión de las operaciones.
 
 
 
-SENSOR
+**SENSOR**
+
+Descripción peticiones GET: Devuelve la información de un sensor filtrado por su idSensor o su idDevice.
+Descripción peticiones POST: Inserta los valores de un sensor
+
+Url "getSensorVales": "/api/sensor/values/:idSensor"
+Url "getSensorDevice": "/api/sensorOf/:idDevice”
+Url "postSensorValues": "/api/sensor/values/:idSensor"
 
 
 ![](APIRESTImages/getSensor.png)
@@ -174,13 +175,30 @@ SENSOR
 
 
 
-ACTUATOR
+**ACTUATOR**
+
+Descripción peticiones GET: Devuelve la información de un actuador filtrado por su idActuator o su idDevice.
+Descripción peticiones POST: Inserta los valores de un actuador
+
+Url "getActuatorVales": "/api/actuator/values/:idActuator"
+Url "getActuatorDevice": "/api/actuatorOf/:idDevice”
+Url "postActuatorValues": "/api/actuator/values/:idActuator"
 
 ![](APIRESTImages/getActuator.png)
 
 ![](APIRESTImages/updateActuatorValues.png)
 
-SURGERY
+
+
+**SURGERY**
+
+Descripción peticiones GET: Devuelve la información de las operaciones filtrado por su idSurgery
+Descripción peticiones POST: Inserta una nueva operación
+Descripción peticiones DELETE: Elimina una operacion filtrada por su idSurgery
+
+Url "getSurgery": "/api/surgery/:idSurgery"
+Url "postSurgery": "/api/surgery/new"
+Url "deleteSurgery": "/api/surgery/:idSurgery"
 
 ![](APIRESTImages/getSurgery.png)
 
@@ -193,13 +211,11 @@ SURGERY
 
 #### **6.**  **Descripción de los mensajes MQTT**
 
- 
 
 Se trata de un protocolo basado en TCP/IP como base de la comunicación. En el caso de la MQTT, hay que tener en cuenta que cada conexión se mantiene abierta siendo reutilizada en cada comunicación.
 
- 
+Su funcionamiento se basa en un servicio de mensajería push con patrón publicador/suscriptor (pub-sub). Este tipo de infraestructura utiliza una conexión cliente con un servidor central conocido como broker, que en nuestro caso es Mosquitto.
 
-Su funcionamiento se basa en un servicio de mensajería push con patrón publicador/suscriptor (pub-sub). Varias fuentes de información afirman que este tipo de infraestructura utiliza una conexión cliente con un servidor central conocido como broker.
 <p align="center">
 <img src="images/MQTT1.PNG">
 </p>
@@ -209,15 +225,10 @@ Su funcionamiento se basa en un servicio de mensajería push con patrón publica
 
 En el presente proyecto, nuestra estructura de los mensajes MQTT, se representa mediante el siguiente diagrama.
 
- 
-
-<img src="images/mqtt.jpg" />
-
-
 <p align="center">
-     Figura 5: Diagrama descripción mensajes MQTT (proyecto)
+ <img src="images/mqtt.jpg" />
+ Figura 5: Diagrama descripción mensajes MQTT (proyecto)
 </p>
 
- 
 
-En resumen, el cliente, desde la aplicación web, active de manera manual los actuadores
+En resumen, el cliente desde la aplicación web, elige el actuador que desea activar manualmente y envía un mensaje MQTT el cual llegará al servidor y el cliente “ESP8266” previamente suscrito al topic, recibirá el mensaje alterando el estado del actuador.
