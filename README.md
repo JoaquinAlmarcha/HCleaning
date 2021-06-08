@@ -36,10 +36,7 @@ Se adjunta los elementos Hardware que se están empleando en el proyecto
 
 <p align="center">
 <img src="images/hardware.png" />
-</p>
 
-
-<p align="center">
 Figura 1: Elementos Hardware en la solución
 </p>
 
@@ -55,8 +52,6 @@ A continuación, se adjunta el diagrama de conexión de los componentes
 
 <p align="center">
 <img src="images/DiagramaConexiones.jpg" />
-</p>    
-<p align="center">
 Figura 2: Diagrama de conexión de los componentes
 </p>
 
@@ -72,10 +67,8 @@ Figura 2: Diagrama de conexión de los componentes
 ## **4.**  Modelo de la base de datos
 
 
-
-![](images/ModeloBaseDatos.png)
-
 <p align="center">
+    ![](images/ModeloBaseDatos.png)
     Figura 3: Modelo de la base de datos 
 </p>
 
@@ -247,9 +240,7 @@ Se trata de un protocolo basado en TCP/IP como base de la comunicación. En el c
 Su funcionamiento se basa en un servicio de mensajería push con patrón publicador/suscriptor (pub-sub). Este tipo de infraestructura utiliza una conexión cliente con un servidor central conocido como broker, que en nuestro caso es Mosquitto.
 
 <p align="center">
-<img src="images/MQTT1.PNG">
-</p>
-<p align="center">
+    <img src="images/MQTT1.PNG">
     Figura 4: Diagrama descripción mensajes MQTT 
 </p> 
 
