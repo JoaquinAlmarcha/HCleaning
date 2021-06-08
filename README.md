@@ -33,7 +33,7 @@ Se adjunta los elementos Hardware que se están empleando en el proyecto
 
  
 <p align="center">
-<img src="images/hardware.png" />)
+<img src="images/hardware.png" />
 </p>
  
 <p align="center">
