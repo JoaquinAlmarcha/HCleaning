@@ -1,6 +1,8 @@
- 
+# HCleaning
 
-#### **1.**  **Descripción del proyecto** 
+
+
+ ## **1.**  **Descripción del proyecto** 
 
 Controlar la contaminación en varias áreas hoy en día puede ser un gran reto, existen multitudes de empresas que se dedican a la desinfección de distintas salas, estudios, hospitales, oficinas etc. 
 
@@ -19,11 +21,11 @@ Adicionalmente, se controlarán a los usuarios que accedan a las salas blancas y
  
 
 A continuación, se realiza una descripción de los pasos que se han ido desarrollando con el objetivo de la creación de dicha herramienta.
- 
 
- 
 
-#### **2.**  **Hardware empleado en la solución**
+
+
+## **2.**  **Hardware empleado en la solución**
 
  
 
@@ -31,17 +33,19 @@ Se adjunta los elementos Hardware que se están empleando en el proyecto
 
  
 
- 
+
 <p align="center">
 <img src="images/hardware.png" />
 </p>
- 
+
+
 <p align="center">
 Figura 1: Elementos Hardware en la solución
 </p>
 
 
-#### **3.**  **Diagrama de conexión de los componentes**
+
+## **3.**  **Diagrama de conexión de los componentes**
 
  
 
@@ -58,13 +62,14 @@ Figura 2: Diagrama de conexión de los componentes
 
 
 
- 
 
 
 
- 
 
-#### **4.**  Modelo de la base de datos
+
+
+
+## **4.**  Modelo de la base de datos
 
 
 
@@ -78,7 +83,8 @@ Figura 2: Diagrama de conexión de los componentes
 
 
 
-  
+
+
 
 La base de datos almacenará información sobre los usuarios de la API Rest, las operaciones programadas. Las salas se controlarán con sensores y actuadores y la información de cada uno de estos dispositivos. 
 
@@ -96,7 +102,7 @@ Se mantiene un registro de los usuarios de la API. Estos pueden activar manualme
 
  
 
-#### **5.**  **Descripción de los métodos de la API Rest**
+## **5.**  **Descripción de los métodos de la API Rest**
 
  
 
@@ -107,11 +113,10 @@ El diseño de una API REST, se trata de una creación de una interfaz empleando 
 El método REST se basa en la separación de su API en recursos lógicos, donde estos se manipulan mediante peticiones HTTP con **métodos GET, POST, PUT y DELETE.**
 
  
- 
 
-**Métodos GET**
+### **Métodos GET**
 
- 
+
 Para realizar las consultas a las tablas se ha realizado un método GET para cada tabla que filtra por “id”. 
 
 Casos específicos:
@@ -123,9 +128,8 @@ Casos específicos:
 
 
 
- 
 
-**Métodos POST**
+### **Métodos POST**
 
  
 
@@ -138,8 +142,7 @@ Se han implementado métodos POST para la inserción de datos. Esta inserción d
 
  
 
-
- **Métodos DELETE**
+###  **Métodos DELETE**
 
 Se ha implementado un método DELETE para la gestión de las operaciones.
 
@@ -147,25 +150,28 @@ Se ha implementado un método DELETE para la gestión de las operaciones.
 
 
 
+### **IMPLEMENTACIÓN**
 
-**IMPLEMENTACIÓN**
+
 
 
  **DEVICE**
- 
+
  Descripción peticiones GET: Devuelve la información de un dispositivo filtrado por su idDevice o su idRoom.
- 
+
  Descripcion peticiones POST: Inserta la informción de un nuevo dispositivo
- 
+
  Url "getDevice": "/api/device/:idDevice”
- 
+
  Url "getDeviceRoom": "/api/deviceOf/:idRoom”
- 
+
  Url "postDevice": "/api/device/new"
 
 ![](APIRESTImages/getDevice.png)
 
 ![](APIRESTImages/postDevice.png)
+
+
 
 
 
@@ -188,6 +194,8 @@ Url "postSensorValues": "/api/sensor/values/:idSensor"
 
 
 
+
+
 **ACTUATOR**
 
 Descripción peticiones GET: Devuelve la información de un actuador filtrado por su idActuator o su idDevice.
@@ -203,6 +211,8 @@ Url "postActuatorValues": "/api/actuator/values/:idActuator"
 ![](APIRESTImages/getActuator.png)
 
 ![](APIRESTImages/updateActuatorValues.png)
+
+
 
 
 
@@ -229,7 +239,7 @@ Url "deleteSurgery": "/api/surgery/:idSurgery"
 
 
 
-#### **6.**  **Descripción de los mensajes MQTT**
+## **6.**  **Descripción de los mensajes MQTT**
 
 
 Se trata de un protocolo basado en TCP/IP como base de la comunicación. En el caso de la MQTT, hay que tener en cuenta que cada conexión se mantiene abierta siendo reutilizada en cada comunicación.
@@ -243,12 +253,14 @@ Su funcionamiento se basa en un servicio de mensajería push con patrón publica
     Figura 4: Diagrama descripción mensajes MQTT 
 </p> 
 
+
 En el presente proyecto, nuestra estructura de los mensajes MQTT, se representa mediante el siguiente diagrama.
 
 <p align="center">
  <img src="images/mqtt.jpg" />
  Figura 5: Diagrama descripción mensajes MQTT (proyecto)
 </p>
+
 
 
 En resumen, el cliente desde la aplicación web, elige el actuador que desea activar manualmente y envía un mensaje MQTT el cual llegará al servidor y el cliente “ESP8266” previamente suscrito al topic, recibirá el mensaje alterando el estado del actuador.
