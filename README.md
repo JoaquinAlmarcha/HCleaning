@@ -36,10 +36,11 @@ Se adjunta los elementos Hardware que se están empleando en el proyecto
 
 <p align="center">
 <img src="images/hardware.png" />
-
-Figura 1: Elementos Hardware en la solución
 </p>
 
+<p align="center">
+Figura 1: Elementos Hardware en la solución
+</p>
 
 
 ## **3.**  **Diagrama de conexión de los componentes**
@@ -52,9 +53,10 @@ A continuación, se adjunta el diagrama de conexión de los componentes
 
 <p align="center">
 <img src="images/DiagramaConexiones.jpg" />
+</p>    
+<p align="center">
 Figura 2: Diagrama de conexión de los componentes
 </p>
-
 
 
 
@@ -67,11 +69,12 @@ Figura 2: Diagrama de conexión de los componentes
 ## **4.**  Modelo de la base de datos
 
 
+
+![](images/ModeloBaseDatos.png)
+
 <p align="center">
-    ![](images/ModeloBaseDatos.png)
     Figura 3: Modelo de la base de datos 
 </p>
-
 
 
 
@@ -240,10 +243,11 @@ Se trata de un protocolo basado en TCP/IP como base de la comunicación. En el c
 Su funcionamiento se basa en un servicio de mensajería push con patrón publicador/suscriptor (pub-sub). Este tipo de infraestructura utiliza una conexión cliente con un servidor central conocido como broker, que en nuestro caso es Mosquitto.
 
 <p align="center">
-    <img src="images/MQTT1.PNG">
+<img src="images/MQTT1.PNG">
+</p>
+<p align="center">
     Figura 4: Diagrama descripción mensajes MQTT 
 </p> 
-
 
 En el presente proyecto, nuestra estructura de los mensajes MQTT, se representa mediante el siguiente diagrama.
 
@@ -251,7 +255,6 @@ En el presente proyecto, nuestra estructura de los mensajes MQTT, se representa 
  <img src="images/mqtt.jpg" />
  Figura 5: Diagrama descripción mensajes MQTT (proyecto)
 </p>
-
 
 
 En resumen, el cliente desde la aplicación web, elige el actuador que desea activar manualmente y envía un mensaje MQTT el cual llegará al servidor y el cliente “ESP8266” previamente suscrito al topic, recibirá el mensaje alterando el estado del actuador.
